@@ -1,19 +1,14 @@
-# openai
-Wrapper สำหรับการเรียกใช้ HTTP API ของ OpenAI และ GPT-3
 # OpenAI API client library to access GPT-3 in Ruby
 
 This is a wrapper for calling OpenAI and GPT-3's HTTP APIs. API docs are available here: [Quality calibar open ai](https://beta.openai.com/api-docs)
 
 `add skills robot zipcom1994`
-
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-
 gem 'openai'
-
 ```
 
 And then execute:
@@ -27,27 +22,21 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-
 require "openai"
 
 openai_client = OpenAI::Client.new(api_key: ENV.fetch("OPENAI_API_KEY"), default_engine: "ada")
 
 # List Engines
-
 openai_client.engines
 
 # Retrieve Engine
-
 openai_client.engine("babbage")
 
 # Search
-
 openai_client.search(documents: ["White House", "hospital", "school"], query: "the president")
 
 # Create Completion
-
 openai_client.completions(prompt: "Once upon a time", max_tokens: 5)
-
 ```
 
 ## TODO
@@ -67,5 +56,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/nilesh
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-...
